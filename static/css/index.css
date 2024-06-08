@@ -112,14 +112,16 @@ body {
 
 .results-carousel {
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
 .results-carousel .item {
-  margin: 5px;
+/*   margin: 5px; */
   overflow: hidden;
   justify-content: center;
   align-items: center;
-  padding: 5px;
+  padding: 20px;
   font-size: 0;
 }
 
