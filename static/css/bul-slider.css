@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 0;
+}
+
+.line {
+  width: 100px;
+  height: 1px;
+  margin: 20px auto 40px auto;
+  border-bottom: 1px solid white;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.container {
+  width: 50%;
+  display: block;
+  margin: 30px auto;
+}
+
+#before-after-slider {
+  width: 100%;
+  max-width: 768px;
+  height: 768px;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;
+}
+
+#before-image, #after-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#before-image {
+  z-index: 2;
+  clip-path: inset(0 50% 0 0); /* Initially clip the right half of the before image */
+}
+
+#before-image img, #after-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#resizer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 4px;
+  background: white;
+  cursor: ew-resize;
+}
+
+#resizer:after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  margin-left: 0px;
+  background: linear-gradient(62deg, #c93072 5%, #3365c0);
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
