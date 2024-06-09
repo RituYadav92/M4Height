@@ -186,39 +186,27 @@
         Building Height Label
       </h2>
     </div>
-    <div>
-    <div id="comparison-slider" style="width: 80%; margin: auto; max-width: 800px;"></div>
-
-    <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
-    <script>
-        new juxtapose.JXSlider('#comparison-slider',
-            [
-                {
-                    src: 'static/images/aerial.jpg',
-                    label: 'Before'
-                },
-                {
-                    src: 'static/images/label.jpg',
-                    label: 'After'
-                }
-            ],
-            {
-                animate: true,
-                showLabels: true,
-                showCredits: true,
-                startingPosition: "50%",
-                makeResponsive: true
-            });
-    </script>
-        </div>
-
-        
+      
   </div>
 </div>
 </div>
 </section>
 <!-- End image carousel -->
- 
+  
+<section class="image-slider-section">
+    <h1 class="title is-3 has-text-centered">MODIS post-fire & Super-resolved DDPM output</h1>
+    <div class="container">
+      <div id="before-after-slider">
+        <div id="after-image">
+          <img src="static/images/aerial.jpg" alt="Aerial Image"/>
+        </div>
+        <div id="before-image">
+          <img src="static/images/label.jpg" alt="Height Labels"/>
+        </div>
+        <div id="resizer"></div>
+      </div>
+    </div>
+  </section> 
 
 
 <!--BibTex citation -->
